@@ -50,8 +50,9 @@ class CardController {
       console.log(error);
       res.sendStatus(500);
     }
-  
-    static async deleteCard(req, res) {
+  }
+
+  static async deleteCard(req, res) {
     const { id } = req.params;
     try {
       const deleteCardById = await CardService.deleteCard(+id);
