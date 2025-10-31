@@ -1,0 +1,125 @@
+.add-deck-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 20px;
+  padding: 1.2rem 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  min-width: 200px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.add-deck-button::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s;
+  z-index: 1;
+}
+
+.add-deck-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4), 
+              0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.add-deck-button:hover::before {
+  left: 100%;
+}
+
+.add-deck-button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.button-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.add-deck-button:hover .button-icon {
+  transform: scale(1.2) rotate(90deg);
+}
+
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 50%, #667eea 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.add-deck-button:hover .button-glow {
+  opacity: 0.3;
+}
+
+/* Анимация появления */
+@keyframes buttonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.add-deck-button {
+  animation: buttonAppear 0.6s ease-out 0.2s both;
+}
+
+/* Пульсирующая анимация для привлечения внимания */
+@keyframes gentlePulse {
+  0%, 100% {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3), 
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                0 0 20px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.add-deck-button {
+  animation: buttonAppear 0.6s ease-out 0.2s both, 
+             gentlePulse 3s ease-in-out infinite 1s;
+}
