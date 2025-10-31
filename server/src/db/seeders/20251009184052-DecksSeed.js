@@ -1,29 +1,29 @@
-'use strict';
+"use strict";
 const data = [
   {
-    title: "Мир Гарри Поттера",
+    title: "Искусственный интеллект",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    title: "КиноМания",
+  {
+    title: "Великие изобретения",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    title: "Россия",
+  {
+    title: "Мир животных",
     createdAt: new Date(),
     updatedAt: new Date(),
-  }
-  
-]
+  },
+];
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
- async up(queryInterface) {
+  async up(queryInterface) {
     await queryInterface.bulkInsert("Decks", data, {});
   },
 
- async down(queryInterface) {
-    await queryInterface.bulkDelete('Decks', null, {})
+  async down(queryInterface) {
+    await queryInterface.bulkDelete("Decks", null, {});
   },
 };
