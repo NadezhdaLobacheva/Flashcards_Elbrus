@@ -1,22 +1,52 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 export default function NavBar() {
   return (
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar expand="lg" className="custom-navbar">
       <Container>
-        <Navbar.Brand>
-          <NavLink to={"/"} className="nav-link">
-            Главная
+        <Navbar.Brand className="brand-logo">
+          <NavLink to={"/"} className="nav-brand-link">
+            🎮 CardMaster
           </NavLink>
         </Navbar.Brand>
-        <Nav className="mx-auto">
-          <NavLink to={"/game"} className="nav-link">
-            Игра
-          </NavLink>
-        </Nav>
+
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="navbar-toggler"
+        />
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <NavLink
+              to={"/game"}
+              className={({ isActive }) =>
+                `nav-link-custom ${isActive ? "nav-link-active" : ""}`
+              }
+            >
+              🎯 Играть
+            </NavLink>
+            <NavLink
+              to={"/deck"}
+              className={({ isActive }) =>
+                `nav-link-custom ${isActive ? "nav-link-active" : ""}`
+              }
+            >
+              🃏 Мои колоды
+            </NavLink>
+            <NavLink
+              to={"/profile"}
+              className={({ isActive }) =>
+                `nav-link-custom ${isActive ? "nav-link-active" : ""}`
+              }
+            >
+              👤 Профиль
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
