@@ -1,174 +1,121 @@
 "use strict";
+
 const data = [
+  // ===== Искусственный интеллект (deckId: 1) =====
   {
-    question: "Какое заклинание используется для создания света?",
-    answer: "Люмос",
+    question:
+      "Как называется технология, имитирующая работу человеческого мозга?",
+    answer: "Нейронная сеть",
     deckId: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    question: "В кого превращался Питер Петтигрю?",
-    answer: "Крыса",
+  {
+    question:
+      "Какая компания разработала язык Python, часто используемый в ML?",
+    answer: "Python Software Foundation",
     deckId: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какое прозвище было у Северуса Снейпа?",
-    answer: "Принц-полукровка",
+  {
+    question: "Как называется процесс, когда ИИ обучается на примерах?",
+    answer: "Обучение с учителем",
     deckId: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какой предмет нужно было достать в первом испытании Турнира Трех Волшебников?",
-    answer: "Яйцо",
+  {
+    question: "Какой фреймворк используется для глубокого обучения от Google?",
+    answer: "TensorFlow",
     deckId: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Кто был крестным отцом Гарри?",
-    answer: "Сириус Блек",
+  {
+    question: "Какой алгоритм используется для классификации текстов и спама?",
+    answer: "Наивный байесовский классификатор",
     deckId: 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Как называется газетное издание волшебного мира?",
-    answer: "Ежедневный пророк",
-    deckId: 1,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-      {
-    question: "В какое животное могла превращаться профессор МакГонагалл?",
-    answer: "Кошка",
-    deckId: 1,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-      {
-    question: "Какой патронус у Гарри Поттера?",
-    answer: "Олень",
-    deckId: 1,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-    {
-    question: "Какая фамилия у главного героя 'Бойцовского клуба'?",
-    answer: "Дарден",
+
+  // ===== Великие изобретения (deckId: 2) =====
+  {
+    question: "Кто изобрёл лампу накаливания?",
+    answer: "Томас Эдисон",
     deckId: 2,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    question: "Какой фильм с Леонардо ДиКаприо про сны внутри снов?",
-    answer: "Начало",
+  {
+    question:
+      "Какое изобретение позволило людям быстро передавать сообщения на расстоянии?",
+    answer: "Телеграф",
     deckId: 2,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    question: "Какой артефакт нес Фродо Бэггинс?",
-    answer: "Кольцо",
+  {
+    question: "Кто создал первый персональный компьютер Apple I?",
+    answer: "Стив Возняк",
     deckId: 2,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    question: "Кто был создателем Железного человека?",
-    answer: "Тонни Старк",
+  {
+    question: "Какое изобретение сделало возможным полёты человека?",
+    answer: "Самолёт",
     deckId: 2,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    question: "Как называется планета в 'Аватаре'?",
-    answer: "Пандорра",
+  {
+    question: "Кто изобрёл печатный станок?",
+    answer: "Иоганн Гутенберг",
     deckId: 2,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-    {
-    question: "Какая игра была в фильме 'Джуманджи'?",
-    answer: "Джуманджи",
-    deckId: 2,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-    {
-    question: "Кто главный герой 'Крестного отца'?",
-    answer: "Дон Корлеоне",
-    deckId: 2,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-    {
-    question: "Кто играл Джокера в 'Темном рыцаре'?",
-    answer: "Хит Леджер",
-    deckId: 2,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-      {
-    question: "Какой дворец под Санкт-Петербургом знаменит своими фонтанами?",
-    answer: "Петергоф",
+
+  // ===== Мир животных (deckId: 3) =====
+  {
+    question: "Какое животное является самым крупным на Земле?",
+    answer: "Синий кит",
     deckId: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какое озеро самое глубокое в мире?",
-    answer: "Байкал",
+  {
+    question: "Какое животное может спать стоя?",
+    answer: "Лошадь",
     deckId: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какой вулкан находится на Камчатке?",
-    answer: "Ключевская сопка",
+  {
+    question: "Какое насекомое живёт самой крупной колонией?",
+    answer: "Муравей",
     deckId: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какой музей в Санкт-Петербурге самый известный?",
-    answer: "Эрмитаж",
+  {
+    question: "Какое животное известно своей способностью менять цвет?",
+    answer: "Хамелеон",
     deckId: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какая крепость является символом Москвы?",
-    answer: "Кремль",
+  {
+    question: "Какой птице принадлежит самое большое яйцо?",
+    answer: "Страус",
     deckId: 3,
     createdAt: new Date(),
     updatedAt: new Date(),
   },
-      {
-    question: "Какой пролив разделяет Россию и Аляску?",
-    answer: "Берингов",
-    deckId: 3,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-      {
-    question: "Какая горная система разделяет Европу и Азию?",
-    answer: "Урал",
-    deckId: 3,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-      {
-    question: "Какой памятник в Волгограде символизирует победу?",
-    answer: "Родина-мать",
-    deckId: 3,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }
 ];
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface) {

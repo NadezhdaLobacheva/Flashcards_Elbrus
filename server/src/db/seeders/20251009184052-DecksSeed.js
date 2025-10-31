@@ -1,17 +1,17 @@
 "use strict";
 const data = [
   {
-    title: "TOMAS WORLD",
+    title: "Искусственный интеллект",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    title: "Pepe",
+    title: "Великие изобретения",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    title: "ImageCat",
+    title: "Мир животных",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
