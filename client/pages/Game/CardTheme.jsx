@@ -1,17 +1,20 @@
 import "./CardTheme.css";
+import tomasImg from "/tomas.jpg?url";
+import pepeImg from "/pepe.png?url";
+import imageCat from "/imagecat.jpeg?url";
 
 export default function CardTheme({ theme, handleTheme }) {
   let img = "";
 
   switch (theme.title) {
     case "TOMAS WORLD":
-      img = "/tomas.jpg";
+      img = tomasImg;
       break;
-    case "КиноМания":
-      img = "/pepe.jpg";
+    case "Pepe":
+      img = pepeImg;
       break;
-    case "Россия":
-      img = "/imagecat.jpg";
+    case "ImageCat":
+      img = imageCat;
       break;
     default:
       img = "";
