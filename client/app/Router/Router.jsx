@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "../../pages/Home/HomePage";
 import GamePage from "../../pages/Game/GamePage";
 import Layout from "../Layout/Layout";
+import MyDeckPage from "../../pages/MyDeck/MyDeckPage";
 
 export default function Router() {
   return (
@@ -11,6 +12,7 @@ export default function Router() {
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/game" element={<GamePage />} />
+          <Route path="/mydeck" element={<MyDeckPage />} />
           <Route path="*" element={<h1>Нет контента</h1>} />
         </Route>
       </Routes>

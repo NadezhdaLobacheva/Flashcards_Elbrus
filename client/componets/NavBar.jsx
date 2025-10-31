@@ -14,34 +14,22 @@ export default function NavBar() {
           </NavLink>
         </Navbar.Brand>
 
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="navbar-toggler"
-        />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggler" />
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink
-              to={"/game"}
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? "nav-link-active" : ""}`
-              }
-            >
+            <NavLink to={"/game"} className={({ isActive }) => `nav-link-custom ${isActive ? "nav-link-active" : ""}`}>
               🎯 Играть
             </NavLink>
             <NavLink
-              to={"/deck"}
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? "nav-link-active" : ""}`
-              }
+              to={"/mydeck"}
+              className={({ isActive }) => `nav-link-custom ${isActive ? "nav-link-active" : ""}`}
             >
               🃏 Мои колоды
             </NavLink>
             <NavLink
               to={"/profile"}
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? "nav-link-active" : ""}`
-              }
+              className={({ isActive }) => `nav-link-custom ${isActive ? "nav-link-active" : ""}`}
             >
               👤 Профиль
             </NavLink>
